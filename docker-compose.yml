@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  app:
+    build: ./docker-config/node
+    container_name: "express_node"
+    tty: true
+    volumes:
+      - ./express:/app
+    ports:
+      - "8080:3000"
